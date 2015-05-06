@@ -37,6 +37,10 @@ Cylon.robot({
 }).start();
 ```
 
+## How to Connect
+
+The Bebop is a WiFi device, and by default it is configured to act as a WiFi access point. To connect to a single drone just connect your computer's WiFi to the drone's WiFi. The default name for the Bebop's access point will include "Bebop" in its name.
+
 ## Documentation
 
 We're busy adding documentation to our web site at http://cylonjs.com/ please check there as we continue to work on Cylon.js
@@ -51,7 +55,7 @@ Thank you!
 * We will look at the patch, test it out, and give you feedback.
 * Avoid doing minor whitespace changes, renamings, etc. along with merged content. These will be done by the maintainers from time to time but they can complicate merges and should be done seperately.
 * Take care to maintain the existing coding style.
-* Add unit tests for any new or changed functionality & Lint and test your code using [Grunt](http://gruntjs.com/).
+* Add unit tests for any new or changed functionality & Lint and test your code using [make](http://www.gnu.org/software/make/).
 * All pull requests should be "fast forward"
   * If there are commits after yours use “git rebase -i <new_head_branch>”
   * If you have local changes you may need to use “git stash”
