@@ -1,18 +1,5 @@
 var cylon = require("cylon");
 
-function validatePitch(data) {
-  var value = Math.abs(data);
-  if (value >= 0.1) {
-    if (value <= 1.0) {
-      return (Math.round(value * 100.0) / 100.0) * 100;
-    } else {
-      return 1.0 * 100;
-    }
-  } else {
-    return 0.0;
-  }
-}
-
 cylon.robot({
   connections: {
     joystick: { adaptor: "joystick" },
@@ -92,3 +79,16 @@ cylon.robot({
     }, 10);
   }
 }).start();
+
+function validatePitch(data) {
+  var value = Math.abs(data);
+  if (value >= 0.1) {
+    if (value <= 1.0) {
+      return Math.round(value * 100);
+    } else {
+      return 100;
+    }
+  } else {
+    return 0;
+  }
+}
