@@ -1,13 +1,40 @@
 # Cylon.js For Bebop
 
-Cylon.js (http://cylonjs.com) is a JavaScript framework for robotics and physical computing using Node.js
+Cylon.js (http://cylonjs.com) is a JavaScript framework for robotics, physical computing and the Internet of Things.
 
-## Getting Started
-Install the module with: `npm install cylon-bebop`
+This module provides an adaptor/driver for the [Parrot Bebop](http://www.parrot.com/products/bebop-drone/) drone.
 
-## Example
+The implementation uses the [`node-bebop`](https://github.com/hybridgroup/node-bebop) node module from [@hybridgroup](https://github.com/hybridgroup).
+
+Want to use Ruby on robots? Check out our sister project Artoo (http://artoo.io)
+
+Want to use the Go programming language to power your robots? Check out our sister project Gobot (http://gobot.io).
+
+[![Build Status](https://secure.travis-ci.org/hybridgroup/cylon-bebop.png?branch=master)](http://travis-ci.org/hybridgroup/cylon-bebop) [![Code Climate](https://codeclimate.com/github/hybridgroup/cylon-bebop/badges/gpa.svg)](https://codeclimate.com/github/hybridgroup/cylon-bebop) [![Test Coverage](https://codeclimate.com/github/hybridgroup/cylon-bebop/badges/coverage.svg)](https://codeclimate.com/github/hybridgroup/cylon-bebop)
+
+## How To Install
+
+    $ npm install cylon cylon-bebop
+
+## How to Use
 
 ```javascript
+var Cylon = require('cylon');
+
+Cylon.robot({
+  connections: {
+    bebop: { adaptor: 'bebop' }
+  },
+
+  devices: {
+    drone: { driver: 'bebop' }
+  },
+
+  work: function(my) {
+    my.drone.takeOff();
+    after((5).seconds(), my.drone.land);
+  }
+}).start();
 ```
 
 ## Documentation
@@ -30,7 +57,7 @@ Thank you!
   * If you have local changes you may need to use “git stash”
 
 ## Release History
-
+None yet...
 
 ## License
 Copyright (c) 2013-2015 The Hybrid Group. Licensed under the Apache 2.0 license.
