@@ -8,13 +8,13 @@ var Adaptor = source("adaptor"),
 describe("index", function() {
   describe("#adaptors", function() {
     it("is an array of supplied adaptors", function() {
-      expect(index.adaptors).to.be.eql(['bebop']);
+      expect(index.adaptors).to.be.eql(["bebop"]);
     });
   });
 
   describe("#drivers", function() {
     it("is an array of supplied drivers", function() {
-      expect(index.drivers).to.be.eql(['bebop']);
+      expect(index.drivers).to.be.eql(["bebop"]);
     });
   });
 
