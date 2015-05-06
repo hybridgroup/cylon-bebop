@@ -12,7 +12,7 @@ Want to use the Go programming language to power your robots? Check out our sist
 
 [![Build Status](https://secure.travis-ci.org/hybridgroup/cylon-bebop.png?branch=master)](http://travis-ci.org/hybridgroup/cylon-bebop) [![Code Climate](https://codeclimate.com/github/hybridgroup/cylon-bebop/badges/gpa.svg)](https://codeclimate.com/github/hybridgroup/cylon-bebop) [![Test Coverage](https://codeclimate.com/github/hybridgroup/cylon-bebop/badges/coverage.svg)](https://codeclimate.com/github/hybridgroup/cylon-bebop)
 
-## How To Install
+## How to Install
 
     $ npm install cylon cylon-bebop
 
