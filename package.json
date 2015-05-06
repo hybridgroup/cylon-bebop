@@ -19,6 +19,6 @@
   },
   "dependencies": {
     "cylon": "^1.0.0",
-    "node-bebop": "git://github.com/hybridgroup/node-bebop.git"
+    "node-bebop": "^0.2.0"
   }
 }
