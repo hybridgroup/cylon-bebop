@@ -2,7 +2,7 @@
 
 var Cylon = require("cylon");
 
-var Adaptor = source("adaptor");
+var Adaptor = lib("adaptor");
 
 describe("Adaptor", function() {
   var adaptor = new Adaptor();

@@ -1,12 +1,14 @@
-var Cylon = require('cylon');
+"use strict";
+
+var Cylon = require("cylon");
 
 Cylon.robot({
   connections: {
-    bebop: { adaptor: 'bebop' }
+    bebop: { adaptor: "bebop" }
   },
 
   devices: {
-    drone: { driver: 'bebop' }
+    drone: { driver: "bebop" }
   },
 
   work: function(my) {

@@ -2,7 +2,7 @@
 
 var Cylon = require("cylon");
 
-var Driver = source("driver");
+var Driver = lib("driver");
 
 describe("Driver", function() {
   var driver = new Driver({

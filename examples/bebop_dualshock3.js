@@ -1,13 +1,26 @@
+"use strict";
+
 var cylon = require("cylon");
+
+function validatePitch(data) {
+  var value = Math.abs(data);
+  if (value >= 0.1) {
+    if (value <= 1.0) { return Math.round(value * 100); }
+    return 100;
+  }
+
+  return 0;
+}
 
 cylon.robot({
   connections: {
     joystick: { adaptor: "joystick" },
-    bebop:  { adaptor: 'bebop' }
+    bebop: { adaptor: "bebop" }
   },
+
   devices: {
     controller: { driver: "dualshock-3", connection: "joystick" },
-    drone:      { driver: "bebop", connection: "bebop" }
+    drone: { driver: "bebop", connection: "bebop" }
   },
   work: function() {
     var that = this,
@@ -79,16 +92,3 @@ cylon.robot({
     }, 10);
   }
 }).start();
-
-function validatePitch(data) {
-  var value = Math.abs(data);
-  if (value >= 0.1) {
-    if (value <= 1.0) {
-      return Math.round(value * 100);
-    } else {
-      return 100;
-    }
-  } else {
-    return 0;
-  }
-}

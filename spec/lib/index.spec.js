@@ -1,9 +1,9 @@
 "use strict";
 
-var index = source("index");
+var index = lib("index");
 
-var Adaptor = source("adaptor"),
-    Driver = source("driver");
+var Adaptor = lib("adaptor"),
+    Driver = lib("driver");
 
 describe("index", function() {
   describe("#adaptors", function() {

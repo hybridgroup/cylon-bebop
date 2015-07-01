@@ -21,18 +21,21 @@
     "Bebop",
     "nodecopter"
   ],
-  
+
   "bugs": "https://github.com/hybridgroup/cylon-bebop/issues",
   "repository": {
     "type": "git",
     "url": "https://github.com/hybridgroup/cylon-bebop"
   },
+
   "devDependencies": {
-    "chai": "2.1.0",
-    "mocha": "2.1.0",
-    "sinon": "1.12.2",
-    "sinon-chai": "2.7.0"
+    "sinon-chai": "~2.4.0",
+    "chai":       "~1.7.2",
+    "mocha":      "~1.12.1",
+    "sinon":      "~1.7.3",
+    "eslint":     "~0.19.0"
   },
+
   "dependencies": {
     "cylon": "^1.0.0",
     "node-bebop": "^0.2.0"
