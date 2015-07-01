@@ -3,7 +3,6 @@
   "description": "Cylon module for the Parrot Bebop drone",
   "homepage": "http://cylonjs.com",
   "version": "0.1.0",
-  "main": "lib/index.js",
   "author": "The Hybrid Group <cylonjs@hybridgroup.com>",
 
   "license": "Apache-2.0",

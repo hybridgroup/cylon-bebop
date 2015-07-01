@@ -1,6 +1,6 @@
 "use strict";
 
-var index = lib("index");
+var index = lib("../");
 
 var Adaptor = lib("adaptor"),
     Driver = lib("driver");
