@@ -2,7 +2,7 @@
   "name": "cylon-bebop",
   "description": "Cylon module for the Parrot Bebop drone",
   "homepage": "http://cylonjs.com",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "The Hybrid Group <cylonjs@hybridgroup.com>",
 
   "license": "Apache-2.0",
@@ -18,7 +18,9 @@
     "hardware",
     "Parrot",
     "Bebop",
-    "nodecopter"
+    "nodecopter",
+    "drones",
+    "drone"
   ],
 
   "bugs": "https://github.com/hybridgroup/cylon-bebop/issues",
@@ -36,7 +38,7 @@
   },
 
   "dependencies": {
-    "cylon": "^1.1.0",
+    "cylon": "^1.2.0",
     "node-bebop": "^0.2.0"
   }
 }
