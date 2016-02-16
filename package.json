@@ -39,6 +39,6 @@
 
   "dependencies": {
     "cylon": "^1.2.0",
-    "node-bebop": "^0.3.0"
+    "node-bebop": "^0.4.0"
   }
 }

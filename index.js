@@ -1,16 +1,20 @@
 "use strict";
 
-var Adaptor = require("./lib/adaptor"),
-    Driver = require("./lib/driver");
+var Adaptor = require("./lib/adaptor");
+
+var Drivers = {
+  "bebop": require("./lib/driver"),
+  "piloting": require("./lib/piloting")
+};
 
 module.exports = {
-  // Adaptors your module provides, e.g. ["spark"]
+  // Adaptors this module provides
   adaptors: ["bebop"],
 
-  // Drivers your module provides, e.g. ["led", "button"]
-  drivers: ["bebop"],
+  // Drivers this module provides
+  drivers: Object.keys(Drivers),
 
-  // Modules intended to be used with yours, e.g. ["cylon-gpio"]
+  // Modules intended to be used with this module (currently none)
   dependencies: [],
 
   adaptor: function(opts) {
@@ -18,6 +22,12 @@ module.exports = {
   },
 
   driver: function(opts) {
-    return new Driver(opts);
+    opts = opts || {};
+
+    if (!Drivers[opts.driver]) {
+      return null;
+    }
+
+    return new Drivers[opts.driver](opts);
   }
 };
