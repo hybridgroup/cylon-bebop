@@ -13,19 +13,19 @@ Cylon.robot({
 
   work: function(my) {
     my.drone.on("ready", function() {
-      console.log("ready...")
+      console.log("ready...");
     });
 
     my.drone.on("takingOff", function() {
-      console.log("taking off...")
+      console.log("taking off...");
     });
 
     my.drone.on("landing", function() {
-      console.log("landing...")
+      console.log("landing...");
     });
 
     my.drone.on("landed", function() {
-      console.log("landed.")
+      console.log("landed.");
     });
 
     my.drone.takeOff();
