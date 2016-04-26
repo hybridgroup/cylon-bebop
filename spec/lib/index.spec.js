@@ -3,8 +3,7 @@
 var index = lib("../");
 
 var Adaptor = lib("adaptor"),
-    Driver = lib("driver"),
-    Piloting = lib("piloting");
+    Driver = lib("driver");
 
 describe("index", function() {
   describe("#adaptors", function() {
@@ -15,7 +14,26 @@ describe("index", function() {
 
   describe("#drivers", function() {
     it("is an array of supplied drivers", function() {
-      expect(index.drivers).to.be.eql(["bebop", "piloting"]);
+      expect(index.drivers).to.be.eql(["bebop",
+                                       "animations",
+                                       "calibration",
+                                       "camera",
+                                       "charger",
+                                       "common",
+                                       "gps",
+                                       "gps-settings",
+                                       "mavlink",
+                                       "media-record",
+                                       "media-streaming",
+                                       "network",
+                                       "network-settings",
+                                       "overheat",
+                                       "picture-settings",
+                                       "piloting",
+                                       "piloting-settings",
+                                       "settings",
+                                       "speed-settings",
+                                       "wifi-settings"]);
     });
   });
 
@@ -29,12 +47,6 @@ describe("index", function() {
     describe("bebop driver", function() {
       it("returns an instance of the bebop Driver", function() {
         expect(index.driver({driver: "bebop"})).to.be.instanceOf(Driver);
-      });
-    });
-
-    describe("piloting driver", function() {
-      it("returns an instance of the piloting Driver", function() {
-        expect(index.driver({driver: "piloting"})).to.be.instanceOf(Piloting);
       });
     });
   });

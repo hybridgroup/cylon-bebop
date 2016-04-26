@@ -8,10 +8,12 @@ Cylon.robot({
   },
 
   devices: {
-    drone: { driver: "piloting" }
+    drone: { driver: "piloting" },
+    video: { driver: "media-streaming"}
   },
 
   work: function(my) {
+    my.video.videoEnable(1);
     my.drone.takeOff();
     after((5).seconds(), my.drone.landing);
   }
