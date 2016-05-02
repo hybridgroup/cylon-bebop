@@ -19,7 +19,8 @@ cylon.robot({
   },
 
   devices: {
-    controller: { driver: "dualshock-3", connection: "joystick" },
+    controller: { driver: "dualshock-3", connection: "joystick",
+                  description: "ShanWan PS(R) Ga`epad" },
     drone: { driver: "bebop", connection: "bebop" }
   },
   work: function() {
@@ -56,7 +57,7 @@ cylon.robot({
     });
 
     setInterval(function() {
-      var pair = leftStick;
+      var pair = rightStick;
 
       if (pair.y < 0) {
         that.drone.forward(validatePitch(pair.y));
@@ -72,7 +73,7 @@ cylon.robot({
     }, 0);
 
     setInterval(function() {
-      var pair = rightStick;
+      var pair = leftStick;
 
       if (pair.y < 0) {
         that.drone.up(validatePitch(pair.y));
