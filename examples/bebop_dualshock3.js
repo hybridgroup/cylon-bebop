@@ -19,8 +19,7 @@ cylon.robot({
   },
 
   devices: {
-    controller: { driver: "dualshock-3", connection: "joystick",
-                  description: "ShanWan PS(R) Ga`epad" },
+    controller: { driver: "dualshock-3", connection: "joystick" },
     drone: { driver: "bebop", connection: "bebop" }
   },
   work: function() {
